@@ -1,0 +1,31 @@
+{
+  "name": "blockchain-week-tutorial",
+  "version": "1.0.0",
+  "description": "Code for Day 1 of Blockchain Week with Govt of Canada",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlockchainNL/blockchain-week-tutorial.git"
+  },
+  "keywords": [
+    "truffle",
+    "ethereum",
+    "solidity",
+    "web3",
+    "smart",
+    "contracts",
+    "blockchain"
+  ],
+  "author": "BlockchainNL",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/BlockchainNL/blockchain-week-tutorial/issues"
+  },
+  "homepage": "https://github.com/BlockchainNL/blockchain-week-tutorial#readme"
+}
