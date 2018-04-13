@@ -1,0 +1,64 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>St. Paddy's Escrow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="/assets/images/noun_827459_cc.png">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <link rel="stylesheet" type="text/html" media="screen" href="/assets/styles/styles.css" />
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <h1>St. Paddy's Escrow</h1>
+        <hr>
+        <div class="row">
+            <div class="column">
+                <h2>Freelancer</h2>
+                <form>
+                    <fieldset>
+                        <label for="nameField">Name</label>
+                        <input type="text" placeholder="John Smith" id="nameField">
+                        <label for="dayRangeField">Delivery Time (Days)</label>
+                        <select id="dayRangeField">
+                            <option value="0-13">0-13</option>
+                            <option value="14-17">14-17</option>
+                            <option value="18-23">18-23</option>
+                            <option value="24+">24+</option>
+                        </select>
+                        <label for="commentField">Comment</label>
+                        <textarea placeholder="Hello..." id="commentField"></textarea>
+                        <input class="button-primary" type="submit" value="Send">
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="column">
+                <h2>Client</h2>
+                <form>
+                    <fieldset>
+                        <label for="nameField">Name</label>
+                        <input type="text" placeholder="CryptoLunar Inc." id="nameField">
+                        <label for="feeRangeField">Pay Range (ETH)</label>
+                        <select id="feeRangeField">
+                            <option value="0-13">0-13</option>
+                            <option value="14-17">14-17</option>
+                            <option value="18-23">18-23</option>
+                            <option value="24+">24+</option>
+                        </select>
+                        <label for="descriptionField">Project Description</label>
+                        <textarea placeholder="We are building..." id="descriptionField"></textarea>
+                        <input class="button-primary" type="submit" value="Send">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
