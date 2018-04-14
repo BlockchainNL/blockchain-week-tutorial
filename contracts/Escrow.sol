@@ -6,7 +6,7 @@ contract Escrow {
     uint public payment;
     address public client;
     address public freelancer;
-    enum EscrowState { Active, Inactive }
+    enum EscrowState { Inactive, Active }
     EscrowState public state;
 
     // MAPPINGS
@@ -34,12 +34,19 @@ contract Escrow {
     }
 
 
-    function Escrow(address _client, address _freelancer) public {
-        require(_client != address(0) && _freelancer != address(0));
-        client = _client;
-        freelancer = _freelancer;
+    function Escrow() public {
         state = EscrowState.Inactive;
         emit EscrowCreated(client, freelancer);
+    }
+    
+    function setClient(address _client) public {
+        require(_client != address(0));
+        client = _client;
+    }
+    
+    function setFreelancer(address _freelancer) public {
+        require(_freelancer != address(0));
+        freelancer = _freelancer;
     }
     
     function start() public onlyClient inState(EscrowState.Inactive) payable {
