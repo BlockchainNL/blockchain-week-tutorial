@@ -7,7 +7,8 @@ const Escrow = contract(escrow_artifact);
 
 module.exports = {
     init: function() {
-        const self = this;
+        let self = this;
+
         Escrow.setProvider(self.web3.currentProvider);
         if (typeof Escrow.currentProvider.sendAsync !== "function") {
             Escrow.currentProvider.sendAsync = function() {
@@ -17,13 +18,24 @@ module.exports = {
             };
         }
 
+        // Escrow.defaults({from: self.web3.eth.coinbase});
+
         self.web3.eth.getAccounts().then(accounts => {
             console.log(accounts)
             self.web3.eth.defaultAccount = accounts[0]
+
+            // Escrow.defaults(accounts[0]);
         }); // test
     },
     setClient: function(clientAddress) {
-        console.log(clientAddress);
+        let self = this;
+        console.log("setClient:\t" + clientAddress + "default:\t" + self.web3.eth.defaultAccount);
+        
+        self.client = clientAddress;
+        Escrow.defaults(self.client);
+
+        Escrow.setProvider(self.web3.currentProvider);
+        
         let escrowInstance;
         Escrow.deployed().then((instace) => {
             escrowInstance = instace;
@@ -31,6 +43,7 @@ module.exports = {
         }).then(() => {
             console.log(escrowInstance.client);
         }).catch((err) => {
+            console.log("error in setClient");
             console.log(err);
         });
     },
@@ -46,14 +59,15 @@ module.exports = {
         });
     },
     start: function(amount) {
+        let self = this;
+        console.log("start:\t" + amount);
         let escrowInstance;
+        Escrow.defaults(self.client);
         Escrow.deployed().then((instace) => {
             escrowInstance = instace;
             escrowInstance.start();
-        }).then(() => {
-            console.log(escrowInstance.state);
-            console.log(escrowInstance.payment);
         }).catch((err) => {
+            console.log("error in start");
             console.log(err);
         });
     },

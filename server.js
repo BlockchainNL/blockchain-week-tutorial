@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/create', (req, res) => {
-  console.log(req.body.clientAddress);
+  console.log("/create route:\t" + req.body.clientAddress);
   escrow.setClient(req.body.clientAddress);
   escrow.start(req.body.amount);
 });
