@@ -1,44 +1,18 @@
 {
-  "name": "blockchain-week-tutorial",
+  "name": "pet-shop",
   "version": "1.0.0",
-  "description": "Code for Day 1 of Blockchain Week with Govt of Canada",
-  "main": "app.js",
+  "description": "",
+  "main": "truffle.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "truffle": "truffle compile && truffle migrate --reset",
-    "test": "truffle test"
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BlockchainNL/blockchain-week-tutorial.git"
-  },
-  "keywords": [
-    "truffle",
-    "ethereum",
-    "solidity",
-    "web3",
-    "smart",
-    "contracts",
-    "blockchain"
-  ],
-  "author": "BlockchainNL",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/BlockchainNL/blockchain-week-tutorial/issues"
-  },
-  "homepage": "https://github.com/BlockchainNL/blockchain-week-tutorial#readme",
-  "dependencies": {
-    "express": "^4.16.3",
-    "ganache-cli": "^6.1.0",
-    "path": "^0.12.7",
-    "truffle-contract": "^3.0.4",
-    "web3": "^1.0.0-beta.33"
-  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "nodemon": "^1.17.3"
+    "lite-server": "^2.3.0"
   }
 }
