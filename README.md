@@ -1,5 +1,5 @@
 # blockchain-week-tutorial
-Code for Day 1 - Development Tutorial Session
+Code for Day 1 ( Development Tutorial Session) of our event with the [Government of Canada](https://gcblockchain-chainedeblocsgc.github.io/).
 
 This tutorial is based on [Truffle's Pet Shop](http://truffleframework.com/tutorials/pet-shop).
 
