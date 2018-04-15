@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
+    "truffle": "truffle compile && truffle migrate --reset",
     "test": "truffle test"
   },
   "repository": {
@@ -33,7 +34,6 @@
   "dependencies": {
     "express": "^4.16.3",
     "ganache-cli": "^6.1.0",
-    "jquery": "^3.3.1",
     "path": "^0.12.7",
     "truffle-contract": "^3.0.4",
     "web3": "^1.0.0-beta.33"

@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
   <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
   <link rel="stylesheet" media="screen" href="/assets/styles/styles.css" />
-  <!-- <script src="/assets/scripts/escrow.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/assets/scripts/escrow.js"></script>
 </head>
 <body>
   <div class="container">
@@ -29,11 +30,11 @@
             <label>Address: </label>
             <input type="text" placeholder="0x..." id="clientAddress" name="clientAddress" />
             <label for="feeRangeField">Pay (ETH)</label>
-            <input type="number" max="50" min="1" name="amount" />
+            <input type="number" max="50" min="1" name="amount" id="amount" />
             <label for="descriptionField">Project Description</label>
             <textarea placeholder="We are building..." id="descriptionField"></textarea>
-            <input class="button-primary" type="submit" value="Create">
-            <button class="button-warn" type="button" formaction="/terminate">Terminate Project</button>
+            <input id="create" class="button-primary" type="submit" value="Create">
+            <button id="terminate" class="button-warn" type="button" formaction="/terminate">Terminate Project</button>
           </fieldset>
         </form>
       </div> <!-- .column -->
@@ -58,7 +59,7 @@
             </select>
             <label for="commentField">Comment</label>
             <textarea placeholder="Hello..." id="commentField"></textarea>
-            <input class="button-primary" type="submit" value="Complete">
+            <input id="complete" class="button-primary" type="submit" value="Complete">
           </fieldset>
         </form>
       </div> <!-- .column -->
