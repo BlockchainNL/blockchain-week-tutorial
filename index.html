@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>St. Paddy's Escrow</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>St. Paddy's Escrow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/png" href="/assets/images/noun_827459_cc.png">
+  <link rel="icon" type="image/png" href="/assets/images/noun_827459_cc.png">
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
-    <link rel="stylesheet" media="screen" href="/assets/styles/styles.css" />
-    <!-- <script src="main.js"></script> -->
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <link rel="stylesheet" media="screen" href="/assets/styles/styles.css" />
+  <!-- <script src="/assets/scripts/escrow.js"></script> -->
 </head>
 <body>
-    <div class="container">
-        <h1>St. Paddy's Escrow</h1>
-        <hr>
-        <div class="row">
-            
-            <div class="column">
-                <h2>Client</h2>
-                <h4>Address: <span id="clientAddr" class="address"></span></h4>
-                <form>
-                    <fieldset>
-                        <label for="nameField">Name</label>
-                        <input type="text" placeholder="CryptoLunar Inc." id="nameField">
-                        <label for="feeRangeField">Pay (ETH)</label>
-                        <input type="number" max="50" min="1" />
-                        <label for="descriptionField">Project Description</label>
-                        <textarea placeholder="We are building..." id="descriptionField"></textarea>
-                        <input class="button-primary" type="submit" value="Create">
-                    </fieldset>
-                </form>
-            </div> <!-- .column -->
+  <div class="container">
+    <h1>St. Paddy's Escrow</h1>
+    <hr>
+    <div class="row">
+        
+      <div class="column">
+        <h2>Client</h2>
+        <form method="post" action="/create">
+          <fieldset>
+            <label for="nameField">Name</label>
+            <input type="text" placeholder="CryptoLunar Inc." id="nameField">
+            <label>Address: </label>
+            <input type="text" placeholder="0x..." id="clientAddress" name="clientAddress" />
+            <label for="feeRangeField">Pay (ETH)</label>
+            <input type="number" max="50" min="1" name="amount" />
+            <label for="descriptionField">Project Description</label>
+            <textarea placeholder="We are building..." id="descriptionField"></textarea>
+            <input class="button-primary" type="submit" value="Create">
+            <button class="button-warn" type="button" formaction="/terminate">Terminate Project</button>
+          </fieldset>
+        </form>
+      </div> <!-- .column -->
 
-            <div class="column">
-                <h2>Freelancer</h2>
-                <h4>Address: <span id="freelancerAddr" class="address"></span></h4>
-                <form>
-                    <fieldset>
-                        <label for="nameField">Name</label>
-                        <input type="text" placeholder="John Smith" id="nameField">
-                        <label for="dayRangeField">Delivery Time (Days)</label>
-                        <select id="dayRangeField">
-                            <option value="0-13">0-13</option>
-                            <option value="14-17">14-17</option>
-                            <option value="18-23">18-23</option>
-                            <option value="24-29">24-29</option>
-                            <option value="30+">30+</option>
-                        </select>
-                        <label for="commentField">Comment</label>
-                        <textarea placeholder="Hello..." id="commentField"></textarea>
-                        <input class="button-primary" type="submit" value="Bid">
-                    </fieldset>
-                </form>
-            </div> <!-- .column -->
+      <div class="bar"></div>
 
-        </div> <!-- .row -->
-    </div> <!-- .container -->
+      <div class="column">
+        <h2>Freelancer</h2>
+        <form method="post" action="/complete">
+          <fieldset>
+            <label for="nameField">Name</label>
+            <input type="text" placeholder="John Smith" id="nameField">
+            <label>Address: </label>
+            <input type="text" placeholder="0x..." id="freelancerAddress" name="freelancerAddress" />
+            <label for="dayRangeField">Delivery Time (Days)</label>
+            <select id="dayRangeField">
+              <option value="0-13">0-13</option>
+              <option value="14-17">14-17</option>
+              <option value="18-23">18-23</option>
+              <option value="24-29">24-29</option>
+              <option value="30+">30+</option>
+            </select>
+            <label for="commentField">Comment</label>
+            <textarea placeholder="Hello..." id="commentField"></textarea>
+            <input class="button-primary" type="submit" value="Complete">
+          </fieldset>
+        </form>
+      </div> <!-- .column -->
+
+    </div> <!-- .row -->
+
+    <!-- <h3>Escrow state</h3> -->
+
+  </div> <!-- .container -->
 </body>
 </html>
