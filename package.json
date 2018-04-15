@@ -4,6 +4,7 @@
   "description": "",
   "main": "truffle.js",
   "directories": {
+    "dev": "lite-server",
     "test": "test"
   },
   "scripts": {
