@@ -26,4 +26,7 @@ This tutorial is based on [Truffle's Pet Shop](http://truffleframework.com/tutor
   * [Zeppelin Contracts](https://github.com/OpenZeppelin/zeppelin-solidity)
   * [Gitter chatroom](https://gitter.im/ethereum/solidity)
 * [StackExchange](http://ethereum.stackexchange.com)
-* Looking for more ideas? Check out [State of the dApps](http://stateofthedapps.com)
+* Gamified Tutorials:
+  * [CryptoZombies (all-in-one Ethereum dApp development)](https://cryptozombies.io/)
+  * [Ethernaut (smart contract security)](https://ethernaut.zeppelin.solutions/)
+* Looking for some inspiration? Check out [State of the dApps](http://stateofthedapps.com).
