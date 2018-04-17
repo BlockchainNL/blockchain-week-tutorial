@@ -3,6 +3,8 @@ Code for Day 1 ( Development Tutorial Session) of our event with the [Government
 
 This tutorial is based on [Truffle's Pet Shop](http://truffleframework.com/tutorials/pet-shop).
 
+View today's slides [here](https://app.slidebean.com/p/B8hqzH5N4x/Blockchain-Week).
+
 ---
 
 ## More resources
